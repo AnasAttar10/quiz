@@ -1,9 +1,9 @@
 
-let qustions = [['ما اسم صغير الفيل  ' , 'دغفل'] , [' كم عدد السجدات في القران الكريم ',15] , [' ما هو اول فيلم عربي بالالوان ' , 'الاسكافي'] ,['كم عدد الدول العربية  ' , 22] , [' من هو مكتشف قانون الجاذبية ','نيوتن'] , [' اين يوجد معبد الكرنك   ' , 'فنا']] ; 
+let qustions =[] ; 
 
-answerchild= [['دغفل'  , 'شبل ' ,'حمل' ,'هجرس'] , [50,14,13,15] , ['الكيف' , 'المولد' , 'الاسكافي' ,'باب الحديد'],[50,22,10,40] , ['الرازي' , 'ارمسترونج' ,'ماركوني','نيوتن'] , ['قنا' , 'المحلة' , 'اسوان' ,'السودان']] ; 
+let answerchild =[];
 
-answercoorect = ['دغفل' , 15 , 'الاسكافي' , 22 , 'نيوتن ' , 'قنا'] ; 
+let answercoorect = [] ; 
 
 
 const TheTime = 5 ; 
@@ -22,9 +22,9 @@ btnstart = document.getElementById('btnstart') ;
 
 overlaycontiner = document.getElementById('overlaycontainer'); 
 
-console.log(overlaycontiner.children[0]);
+//console.log(overlaycontiner.children[0]);
 
-console.log(overlaycontiner.children[1].children[3]);
+//console.log(overlaycontiner.children[1].children[3]);
 
 qustion = [] ; 
 
@@ -48,10 +48,12 @@ function GetQustions_FromAjax(){
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
        xrxr = JSON.parse (this.responseText);
+      // console.log(xrxr);
        xrxr.forEach(element =>{
         qustions.push([element.qustions ,element.true_answer]) ; 
         let temparr = [element.answer_1 ,element.answer_2,element.answer_3,element.answer_4]
         answerchild.push(temparr);
+        //console.log("The Answer" + answerchild);
         answercoorect.push(element.true_answer) ;
        })
       }
@@ -75,6 +77,7 @@ spans[i] =document.createElement('span') ;
 spans[i].appendChild(document.createTextNode('#' + (i+1)));
 
 textqustions[i]=document.createTextNode(qustions[i][0] + '?');
+console.log(qustions[i][0]);
 
 paragraphs [i].appendChild(textqustions[i]);
 
@@ -106,7 +109,7 @@ answer[i].appendChild(overlays[i]) ;
 
 }
 }
-console.log(qustions.length) ; 
+//console.log(qustions.length) ; 
 GetQustions_FromAjax();
 
 setTimeout(() => {  
@@ -129,6 +132,7 @@ num = createRandomNumber();
 while( randomNumber.includes(num)){
     num = createRandomNumber();    
 }
+
 console.log(num);
     randomNumber.push(num) ; 
     if(state === 1 )

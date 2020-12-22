@@ -3,14 +3,22 @@
     background-image: linear-gradient(#cc99ff, #ccff33);
     padding: 10px;
     margin: 0;
+    margin-top: 50px;
     color: tomato;
 }
 
 .information{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 99.5%;
   border: 2px solid purple;
+  background-color: gray;
+  color: white;
   margin: 2px;
   border-radius: 5px ;
   overflow: hidden;
+  z-index: 9999;
 }
 .information div  {
     float: left;
