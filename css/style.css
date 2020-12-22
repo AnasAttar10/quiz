@@ -1,0 +1,127 @@
+.continer h1{
+    text-align: center;
+    background-image: linear-gradient(#cc99ff, #ccff33);
+    padding: 10px;
+    margin: 0;
+    color: tomato;
+}
+
+.information{
+  border: 2px solid purple;
+  margin: 2px;
+  border-radius: 5px ;
+  overflow: hidden;
+}
+.information div  {
+    float: left;
+    margin: 0;
+    width: 31.5%;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+.information div:last-child{
+    float: right;
+}
+
+.quiz{
+    width: 49%;
+    background-color:#3333 ; 
+    float: left;
+    margin: 5px;
+}
+.quiz .qustion{
+ background-color: tomato;
+ background-image: linear-gradient(#cc99ff, #ccff33);
+ padding: 5px;
+ color: black;
+ 
+ font-size: 18px;
+ width: 90%;
+ margin: 10px auto;
+ text-align: center;
+ overflow: hidden;
+}
+.qustion >span{
+    display: block;
+    float: left;
+    font-size: 40px;
+    margin-right: 10px;
+    color: red ;
+}
+.qustion >p{
+    float: left;
+}
+.quiz .answer{
+    background-color:white;
+    padding: 5px;
+    color: purple;
+    font-size: 18px;
+    width: 90%;
+    margin: 10px auto;
+    font-size: 18px;
+    overflow: hidden;
+    position: relative;
+   }
+.quiz .answer > div{
+    padding: 5px;
+}
+.quiz .answer > div > input[type='radio'] {
+    margin-right: 15px;
+}
+.quiz .answer .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0 ;
+    left: 0 ;
+    background-color: white;
+    text-align: center;
+    font-size: 80px;
+    color: red;
+}
+.overlaycontainer{
+position: fixed;
+top: 0;
+left: 0;
+background-image: linear-gradient(to right , red , black);
+width: 100%;
+height: 100%;
+color: white;
+z-index: 9999;
+}
+.overlaycontainer >div.active{
+    border: 2px solid white;
+    background-color:#9999;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.overlaycontainer >div.active input{
+    padding: 5px;
+    font-size: 18px;
+
+}
+.overlaycontainer >div :first-child{
+    padding: 20px;
+}
+.overlaycontainer >div.nactive{
+    display: none;
+}
+.overlaycontainer button{
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.overlaycontainer button:hover{
+    background-color: black;
+    color:; 
+}
